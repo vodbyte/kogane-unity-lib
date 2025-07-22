@@ -856,9 +856,9 @@ namespace KoganeUnityLib
 		/// <summary>
 		/// 指定されたインデックスに要素が存在する場合に true を返します
 		/// </summary>
-		public static bool IsDefinedAt<T>( IList<T> self, int index )
+		public static bool IsDefinedAt<T>( this IList<T> self, int index )
 		{
-			return index < self.Count;
+			return index >= 0 && index < self.Count;
 		}
 	}
 }
